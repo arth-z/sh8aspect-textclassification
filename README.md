@@ -4,6 +4,8 @@
  
  ![image](https://github.com/arth-z/sh8aspect-textclassification/assets/103592039/d61e563a-35ff-4abc-a84a-aa678aa22010)
  ![image](https://github.com/arth-z/sh8aspect-textclassification/assets/103592039/d30cccae-defd-47b6-84da-378b01f09c65)
+ ![image](https://github.com/arth-z/sh8aspect-textclassification/assets/103592039/47b6b2b0-971b-4af6-beb5-915f535f06ea)
+ ![image](https://github.com/arth-z/sh8aspect-textclassification/assets/103592039/b5e768cc-6bde-40cc-aafb-78d83dcfe3b6)
  ![image](https://github.com/arth-z/sh8aspect-textclassification/assets/103592039/24216aef-30de-4f4b-87e5-95cc8784ecd8)
  ![image](https://github.com/arth-z/sh8aspect-textclassification/assets/103592039/f0cf8c07-f086-4473-a6df-ec7bc2c71f45)
 
