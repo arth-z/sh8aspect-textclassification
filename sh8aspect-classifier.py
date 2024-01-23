@@ -11,7 +11,7 @@ initial_labeled_ds = []
 
 # pull data from text files, label them using ASPECT_NAMES and labeler function, and put into tf dataset
 for i in range(len(ASPECT_NAMES)):
-    lines_ds = tf.data.TextLineDataset(os.getcwd() + "/sh8aspect-textclassification/sh8aspect-data/train/" + str(i) + "-" + ASPECT_NAMES[i] + "Quotes.txt")
+    lines_ds = tf.data.TextLineDataset(os.getcwd() + "/sh8aspect-data/train/" + str(i) + "-" + ASPECT_NAMES[i] + "Quotes.txt")
     labeled_ds = lines_ds.map(lambda ex: labeler(ex, i))
     initial_labeled_ds.append(labeled_ds)
 
@@ -75,19 +75,19 @@ model = create_model()
 model.summary()
 
 # organise data into training and validation
-train_ds = all_labeled_ds.skip(16).shuffle(500000).padded_batch(4).map(vectorize_text)
-val_ds = all_labeled_ds.take(16).shuffle(500000).padded_batch(4).map(vectorize_text)
+train_ds = all_labeled_ds.skip(32).shuffle(500000).padded_batch(4).map(vectorize_text)
+val_ds = all_labeled_ds.take(32).shuffle(500000).padded_batch(4).map(vectorize_text)
 
 # optimise
 train_ds = train_ds.cache().prefetch(buffer_size=tf.data.AUTOTUNE)
 val_ds = val_ds.cache().prefetch(buffer_size=tf.data.AUTOTUNE)
 
-# train - pretty small dataset, I had to make it myself since this is so niche, so that's why there's like one hundred epochs
+# train - criminally small dataset, I had to make it myself since this is so niche, so that's why there's so many epochs
 # probably overfitted...
 model.fit(
     train_ds,
     validation_data=val_ds,
-    epochs=200)
+    epochs=175)
 
 # export model so it works on raw text
 export_model = export_from_model(model)
