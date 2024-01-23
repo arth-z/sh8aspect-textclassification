@@ -1,5 +1,6 @@
 # sh8aspect-textclassification
  An amateur machine learning project to classify short text passages based on the eight occult Principles of Weatherfactory's Secret Histories setting. Created with TensorFlow.
+ 
  Training data is criminally small, and was created from both my writing/impressions of the aspects, and Cultist Simulator's in-game text from https://uadaf.theevilroot.xyz/frangiclave/
  
  ![image](https://github.com/arth-z/sh8aspect-textclassification/assets/103592039/d61e563a-35ff-4abc-a84a-aa678aa22010)
